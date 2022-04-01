@@ -1,3 +1,7 @@
+/* <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,14 +16,142 @@ html {
 
 body {
   font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #090b1a;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  background-color: #1b1938;
+  width: 100%;
+  max-width: 33rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.card__image {
+  background-image: url(../images/image-header-mobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 10px 10px 10px 1000px rgba(170, 92, 219, 0.5);
+          box-shadow: inset 10px 10px 10px 1000px rgba(170, 92, 219, 0.5);
+  width: 100%;
+  height: 25rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.card__description {
+  margin: 4% 10% 4% 10%;
+  text-align: center;
+}
+
+.card__description h1 {
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.card__description h1 span {
+  color: #aa5cdb;
+}
+
+.card__description p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 2.5rem;
+}
+
+.card__stats {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card__stats h1 {
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.card__stats p {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .attribution {
   font-size: 1.1rem;
   text-align: center;
+  color: white;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #aa5cdb;
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    max-width: 300rem;
+  }
+  .card__image {
+    height: 42rem;
+    max-width: 50rem;
+    margin-bottom: 0;
+    background-image: url(../images/image-header-desktop.jpg);
+  }
+  .card__description {
+    text-align: left;
+    margin-bottom: 15%;
+  }
+  .card__stats {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    margin: 10%;
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */
